@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meal Planner</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        /* Body styles */
+        body {
+            background-color: #f7f9fc;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+        /* Header styles */
+        header {
+            background-color: #8B0000;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            border-bottom: 2px solid #dcdcdc;
+        }
+        /* Logo styles */
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+        .logo img {
+            height: 50px;
+            margin-right: 10px;
+        }
+        .logo h1 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        /* Navigation styles */
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #ffd700; 
+        }
+        /* Headings styles */
+        h1{
+            margin: 20px 0;
+            text-align: center;
+        }
+        h2 {
+            text-align: center;
+            margin: 20px 0;
+            color: black;
+        }
+        /* Meal container styles */
+        #meal-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px;
+        }
+        /* Individual meal item styles */
+        .meal-item {
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 200px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.2s;
+            text-align: center;
+        }
+        .meal-item:hover {
+            transform: scale(1.05);
+        }
+        /* Meal image styles */
+        .meal-item img {
+            width: 100%;
+            height: auto;
+        }
+        /* Meal description styles */
+        .meal-item p {
+            font-size: 16px;
+            padding: 10px 0;
+            color: #333;
+            font-weight: bold;
+        }
+        /* Button styles */
+        .meal-item button, ul#favorite-meals-list button {
+            background-color: #8B0000;
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            font-size: 14px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            transition: background-color 0.3s;
+        }
+        .meal-item button:hover, ul#favorite-meals-list button:hover {
+            background-color: #a23333;
+        }
+        /* Favorite meals list styles */
+        #favorite-meals-list {
+            list-style: none;
+            padding: 0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        #favorite-meals-list li {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            margin: 10px 0;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        #favorite-meals-list img {
+            width: 50px;
+            height: auto;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        /* Footer */
+        footer {
+            background-color: #8B0000;
+            color: white;
+            text-align: center;
+            padding: 15px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="hahiho.png" alt="Logo"> 
+            <h1>Meal Finder</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="mealplanner.html">Meal Planner</a></li>
+                <li><a href="ingredient.html">Ingredient List</a></li>
+                <li><a href="index.html">Search Recipe</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1>Meal Planner</h1>
+
+    <h2>Available Meals</h2>
+    <div id="meal-container"></div>
+
+    <h2>My Favorite Meals</h2>
+    <ul id="favorite-meals-list"></ul>
+    <!-- Footer content -->
+    <footer>
+        <p>&copy; 2024 Meal Finder. All rights reserved.</p>
+    </footer>
+
+    <script src="mealplanner.js"></script>
+</body>
+</html>
